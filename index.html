@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f6f2">
+    <title> Your to-do list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="page">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="Daylight home">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <path d="M16 4v4M16 24v4M4 16h4m16 0h4M7.5 7.5l2.8 2.8m11.4 11.4 2.8 2.8m0-17-2.8 2.8m-11.4 11.4-2.8 2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="16" cy="16" r="6" fill="currentColor"/>
+                    </svg>
+                </span>
+                <span>daylight</span>
+            </a>
+            <span class="topbar-note"><span class="status-dot"></span> A little progress goes a long way</span>
+        </header>
+
+        <section class="workspace" aria-labelledby="page-title">
+            <div class="intro">
+                <p class="eyebrow"><span class="eyebrow-line"></span> YOUR SPACE TO FOCUS</p>
+                <h1 id="page-title">Make room for<br><span>what matters.</span></h1>
+                <p class="intro-copy">A clear list makes for a calmer mind. Get it out of your head and take it one step at a time.</p>
+                <div class="quiet-note">
+                    <span class="quiet-note-icon" aria-hidden="true">✳</span>
+                    <p><strong>Start where you are.</strong><br>Small steps count, too.</p>
+                </div>
+                <span class="sun-decoration" aria-hidden="true"></span>
+            </div>
+
+            <section class="list-card" aria-labelledby="list-title">
+                <div class="card-heading">
+                    <div>
+                        <p class="card-kicker">A FRESH START</p>
+                        <h2 id="list-title">Your to-do list</h2>
+                    </div>
+                    <span class="today-badge"><span></span> TODAY</span>
+                </div>
+
+                <div class="add-task">
+                    <label class="sr-only" for="input">Add a task to your list</label>
+                    <input type="text" placeholder="What would you like to do?" id="input" autocomplete="off">
+                    <button type="button" onclick="show ()">
+                        <span class="button-plus" aria-hidden="true">+</span>
+                        <span>Add task</span>
+                    </button>
+                </div>
+
+                <div class="list-divider"><span>YOUR TASKS</span><span class="divider-line"></span></div>
+                <ol id="display" aria-label="Your tasks"></ol>
+                <p class="card-footer"><span aria-hidden="true">✦</span> One thing at a time. You’ve got this.</p>
+            </section>
+        </section>
+
+        <footer class="page-footer">
+            <span>MADE FOR A MORE MINDFUL DAY</span>
+            <span class="footer-sparkle" aria-hidden="true">✳</span>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
