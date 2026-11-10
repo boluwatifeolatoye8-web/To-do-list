@@ -1,11 +1,12 @@
 :root {
     color-scheme: light;
-    --ink: #263832;
-    --muted: #78827b;
-    --green: #557a62;
-    --green-dark: #3f624b;
+    --ink: #26343d;
+    --muted: #78818a;
+    --green: #526b76;
+    --green-dark: #3e5661;
     --paper: #ffffff;
-    --line: #ecefe8;
+    --line: #e8e7e1;
+    --accent: #c17b5b;
 }
 
 * {
@@ -17,10 +18,7 @@ body {
     min-height: 100vh;
     margin: 0;
     color: var(--ink);
-    background:
-        radial-gradient(ellipse at 10% 12%, rgba(231, 236, 215, 0.82), transparent 31rem),
-        radial-gradient(ellipse at 90% 88%, rgba(244, 229, 208, 0.58), transparent 29rem),
-        #f8f8f4;
+    background: #f5f4f0;
     font-family: "DM Sans", "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -43,7 +41,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(38, 56, 50, 0.08);
+    border-bottom: 1px solid rgba(38, 52, 61, 0.1);
 }
 
 .brand {
@@ -63,10 +61,8 @@ input {
     display: grid;
     place-items: center;
     color: #fff;
-    background: linear-gradient(145deg, #78906d, #4d7459);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(74, 109, 81, 0.2);
+    background: var(--ink);
+    border-radius: 9px;
 }
 
 .brand-mark svg {
@@ -88,12 +84,12 @@ input {
     width: 7px;
     height: 7px;
     display: inline-block;
-    background: #91aa7f;
+    background: var(--accent);
     border-radius: 50%;
 }
 
 .status-dot {
-    box-shadow: 0 0 0 3px rgba(145, 170, 127, 0.15);
+    box-shadow: 0 0 0 3px rgba(193, 123, 91, 0.12);
 }
 
 .workspace {
@@ -113,7 +109,7 @@ input {
 .eyebrow,
 .card-kicker {
     margin: 0;
-    color: var(--green);
+    color: #78818a;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1.8px;
@@ -128,7 +124,7 @@ input {
 .eyebrow-line {
     width: 23px;
     height: 1px;
-    background: #91aa7f;
+    background: var(--accent);
 }
 
 h1,
@@ -154,16 +150,7 @@ h1 span {
 }
 
 h1 span::after {
-    position: absolute;
-    z-index: -1;
-    right: 2px;
-    bottom: 3px;
-    left: 0;
-    height: 9px;
-    background: linear-gradient(90deg, rgba(220, 228, 199, 0.9), rgba(235, 225, 194, 0.68));
-    border-radius: 8px 4px 9px 3px;
-    content: "";
-    transform: rotate(-1.3deg);
+    display: none;
 }
 
 .intro-copy {
@@ -185,10 +172,10 @@ h1 span::after {
     height: 39px;
     display: grid;
     place-items: center;
-    color: #78906c;
-    background: #e8edde;
-    border-radius: 13px;
-    font-size: 20px;
+    color: var(--accent);
+    background: #f0e9e3;
+    border-radius: 10px;
+    font-size: 17px;
 }
 
 .quiet-note p {
@@ -199,21 +186,13 @@ h1 span::after {
 }
 
 .quiet-note strong {
-    color: #46574b;
+    color: #43515a;
     font-size: 12px;
     font-weight: 600;
 }
 
 .sun-decoration {
-    position: absolute;
-    z-index: -1;
-    top: -110px;
-    left: -101px;
-    width: 218px;
-    height: 218px;
-    background: radial-gradient(circle, rgba(247, 232, 193, 0.18), rgba(223, 232, 211, 0.1) 54%, transparent 55%);
-    border: 1px solid rgba(101, 132, 97, 0.13);
-    border-radius: 50%;
+    display: none;
 }
 
 .sun-decoration::before,
@@ -237,9 +216,9 @@ h1 span::after {
     padding: 34px 34px 0;
     overflow: hidden;
     background: var(--paper);
-    border: 1px solid rgba(62, 84, 67, 0.09);
-    border-radius: 22px;
-    box-shadow: 0 28px 70px rgba(45, 59, 45, 0.095), 0 4px 12px rgba(45, 59, 45, 0.035);
+    border: 1px solid #e8e7e1;
+    border-radius: 16px;
+    box-shadow: 0 14px 36px rgba(38, 52, 61, 0.07);
 }
 
 .list-card::before {
@@ -247,9 +226,9 @@ h1 span::after {
     top: 0;
     right: 34px;
     left: 34px;
-    height: 3px;
-    background: linear-gradient(90deg, #a5b88e, #ead7a8 52%, #d9e3ce);
-    border-radius: 0 0 4px 4px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 0 0 2px 2px;
     content: "";
 }
 
@@ -262,7 +241,7 @@ h1 span::after {
 
 .card-kicker {
     margin-bottom: 8px;
-    color: #9aa39a;
+    color: #8b9296;
     font-size: 9px;
     letter-spacing: 1.45px;
 }
@@ -280,9 +259,9 @@ h2 {
     align-items: center;
     gap: 7px;
     padding: 8px 10px;
-    color: #5e715e;
-    background: #f2f5ee;
-    border: 1px solid #e8eee2;
+    color: #657079;
+    background: #f5f5f2;
+    border: 1px solid #ecebe6;
     border-radius: 20px;
     font-size: 9px;
     font-weight: 700;
@@ -298,16 +277,16 @@ h2 {
     display: flex;
     gap: 8px;
     padding: 6px;
-    background: #f8f9f6;
-    border: 1px solid #e9eee6;
-    border-radius: 12px;
+    background: #f8f8f6;
+    border: 1px solid #e8e8e3;
+    border-radius: 9px;
     transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
 .add-task:focus-within {
     background: #fff;
-    border-color: #a9bea7;
-    box-shadow: 0 0 0 4px rgba(83, 123, 98, 0.09);
+    border-color: #9daeb1;
+    box-shadow: 0 0 0 3px rgba(82, 107, 118, 0.1);
 }
 
 .add-task input {
@@ -333,19 +312,18 @@ h2 {
     gap: 7px;
     padding: 0 14px;
     color: #fff;
-    background: linear-gradient(145deg, #63856a, #4d7359);
+    background: var(--ink);
     border: 0;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 11px;
     font-weight: 600;
-    box-shadow: 0 3px 8px rgba(66, 104, 76, 0.17);
+    box-shadow: none;
     transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .add-task button:hover {
-    background: linear-gradient(145deg, #54775c, #3f624b);
-    box-shadow: 0 5px 12px rgba(66, 104, 76, 0.23);
+    background: var(--green-dark);
 }
 
 .add-task button:active {
@@ -353,7 +331,7 @@ h2 {
 }
 
 .add-task button:focus-visible {
-    outline: 3px solid rgba(83, 123, 98, 0.28);
+    outline: 3px solid rgba(82, 107, 118, 0.25);
     outline-offset: 3px;
 }
 
@@ -368,7 +346,7 @@ h2 {
     align-items: center;
     gap: 12px;
     margin: 29px 0 8px;
-    color: #a2aaa1;
+    color: #899197;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 1.2px;
@@ -377,7 +355,7 @@ h2 {
 .divider-line {
     height: 1px;
     flex: 1;
-    background: #edf0eb;
+    background: var(--line);
 }
 
 #display {
@@ -393,7 +371,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #a3aaa3;
+    color: #92999c;
     content: "Your next small win starts here";
     font-size: 12px;
 }
@@ -404,8 +382,8 @@ h2 {
     align-items: center;
     min-height: 48px;
     padding: 12px 12px 12px 42px;
-    color: #48564d;
-    border-bottom: 1px solid #f0f2ed;
+    color: #46535b;
+    border-bottom: 1px solid #eeede8;
     font-size: 13px;
     line-height: 1.5;
     overflow-wrap: anywhere;
@@ -414,8 +392,8 @@ h2 {
 }
 
 #display li:hover {
-    color: #304b3b;
-    background: #fbfcf9;
+    color: #26343d;
+    background: #faf9f6;
 }
 
 #display li::before {
@@ -425,9 +403,9 @@ h2 {
     height: 21px;
     display: grid;
     place-items: center;
-    color: #819578;
-    background: #f0f4eb;
-    border-radius: 7px;
+    color: var(--accent);
+    background: #f4eee9;
+    border-radius: 6px;
     content: counter(task);
     font-size: 10px;
     font-weight: 600;
@@ -440,14 +418,14 @@ h2 {
     gap: 7px;
     margin: 0 -34px;
     padding: 15px 12px;
-    color: #90998f;
-    background: linear-gradient(110deg, #fafbf8, #f8faf5);
-    border-top: 1px solid #f0f2ed;
+    color: #828b8e;
+    background: #fafaf8;
+    border-top: 1px solid #eeede8;
     font-size: 10px;
 }
 
 .card-footer span {
-    color: #93a883;
+    color: var(--accent);
     font-size: 12px;
 }
 
@@ -456,15 +434,15 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #a2aaa1;
-    border-top: 1px solid rgba(38, 56, 50, 0.08);
+    color: #8b9293;
+    border-top: 1px solid rgba(38, 52, 61, 0.1);
     font-size: 9px;
     font-weight: 600;
     letter-spacing: 1.35px;
 }
 
 .footer-sparkle {
-    color: #93a883;
+    color: var(--accent);
     font-size: 15px;
 }
 
@@ -503,13 +481,6 @@ h2 {
         margin-bottom: 23px;
     }
 
-    .sun-decoration {
-        top: -86px;
-        left: auto;
-        right: 3px;
-        width: 174px;
-        height: 174px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -533,7 +504,7 @@ h2 {
 
     .list-card {
         padding: 26px 20px 0;
-        border-radius: 16px;
+        border-radius: 14px;
     }
 
     .card-heading {
